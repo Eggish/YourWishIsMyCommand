@@ -450,7 +450,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
+  m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -611,6 +611,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518a4989e68dfdd438e25ed24b159008, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnBounds: {fileID: 2003930144}
+  Sentences:
+  - I liek viper
 --- !u!61 &2003930144
 BoxCollider2D:
   m_ObjectHideFlags: 0
