@@ -220,6 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: {fileID: 1349388435271332177}
   Collider: {fileID: 1457297372407130900}
+  MovementSpeed: 5
 --- !u!61 &1457297372407130900
 BoxCollider2D:
   m_ObjectHideFlags: 0
