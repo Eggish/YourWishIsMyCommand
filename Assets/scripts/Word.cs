@@ -7,8 +7,6 @@ public class Word : MonoBehaviour
 {
     [SerializeField] private TextMeshPro Text = null;
 
-    [SerializeField] private BoxCollider2D Collider = null;
-
     [SerializeField] private float MovementSpeed = 5.0f;
 
     [HideInInspector] public int PointValue = 0;
@@ -19,10 +17,6 @@ public class Word : MonoBehaviour
         if(Text == null)
         {
             Text = GetComponent<TextMeshPro>();
-        }
-        if(Collider == null)
-        {
-            Collider = GetComponent<BoxCollider2D>();
         }
         Destroy(this, 10);
     }
