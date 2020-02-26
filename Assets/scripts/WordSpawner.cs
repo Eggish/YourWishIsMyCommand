@@ -20,7 +20,6 @@ public class SentenceWrapper
 
 public class WordSpawner : MonoBehaviour
 {
-    [SerializeField] private BoxCollider2D SpawnBounds = null;
     [SerializeField] private BoxCollider2D[] SpawnZones = null;
 
     [SerializeField] private SentenceWrapper[] Sentences = null;
@@ -33,14 +32,10 @@ public class WordSpawner : MonoBehaviour
 
 
     private List<string> WordPile = new List<string>();
+
     void Start()
     {
-        if(SpawnBounds == null)
-        {
-            SpawnBounds = GetComponent<BoxCollider2D>();
-        }
-
-        foreach(SentenceWrapper s in Sentences)
+        foreach (SentenceWrapper s in Sentences)
         {
             ParseSentence(s.Sentence);
         }
@@ -58,7 +53,7 @@ public class WordSpawner : MonoBehaviour
     {
         SpawnTimer -= Time.deltaTime;
 
-        if(SpawnTimer <= 0)
+        if (SpawnTimer <= 0)
         {
             SpawnWord();
         }
@@ -66,12 +61,14 @@ public class WordSpawner : MonoBehaviour
 
     private void SpawnWord()
     {
-        Direction randomDirection = (Direction)Random.Range(0, 4);
+        Direction randomDirection = (Direction) Random.Range(0, 4);
 
         Vector3 spawnPos;
 
-        spawnPos.x = Random.Range(SpawnZones[(int)randomDirection].bounds.min.x, SpawnZones[(int)randomDirection].bounds.max.x);
-        spawnPos.y = Random.Range(SpawnZones[(int)randomDirection].bounds.min.y, SpawnZones[(int)randomDirection].bounds.max.y);
+        spawnPos.x = Random.Range(SpawnZones[(int) randomDirection].bounds.min.x,
+            SpawnZones[(int) randomDirection].bounds.max.x);
+        spawnPos.y = Random.Range(SpawnZones[(int) randomDirection].bounds.min.y,
+            SpawnZones[(int) randomDirection].bounds.max.y);
 
         spawnPos.z = transform.position.z;
 
@@ -88,24 +85,31 @@ public class WordSpawner : MonoBehaviour
 
         int lastSpace = 0;
 
-        for(int i = 0; i < pString.Length; i++)
+        for (int i = 0; i < pString.Length; i++)
         {
-            if(pString[i] == ' '
+            if (pString[i] == ' '
                 || i == pString.Length)
             {
                 string newWord = pString.Substring(lastSpace, i - lastSpace);
-                
+
                 WordPile.Add(newWord);
-                
+
                 letters.Clear();
-                lastSpace = i+1;
+                lastSpace = i + 1;
             }
             else
             {
                 letters.Add(pString[i]);
             }
         }
+
         string lastWord = pString.Substring(lastSpace, pString.Length - lastSpace);
         WordPile.Add(lastWord);
     }
+
+    public SentenceWrapper[] GetSentences()
+    {
+        return Sentences;
+    }
+
 }
