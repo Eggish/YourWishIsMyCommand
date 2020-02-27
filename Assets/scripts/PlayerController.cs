@@ -11,13 +11,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private KeyCode LockKey = KeyCode.Return;
 
     [SerializeField] private float MovementSpeed = 6.0f;
+    [SerializeField] private float SpriteSwitchbackDelay = 0.5f;
 
-    //[SerializeField] private float MaxSpeed = 5.0f;
-
-    //[SerializeField] private float TimeToFullSpeed = 0.5f;
-    //[SerializeField] private float TimeToNoSpeed = 0.5f;
-
-    //[SerializeField] private Rigidbody2D RB = null;
+    [SerializeField] private Sprite DefaultSprite = null;
+    [SerializeField] private Sprite PickupSprite = null;
+    [SerializeField] private SpriteRenderer SpriteRenderer = null;
 
     [SerializeField] private Validator Validator = null;
 
@@ -55,20 +53,6 @@ public class PlayerController : MonoBehaviour
             Validator.LockInChoice();
         }
 
-        //if (Input.GetKey(UpKey))
-        //    Accelerate(Direction.NORTH);
-        //if (Input.GetKey(RightKey))
-        //    Accelerate(Direction.EAST);
-        //if (Input.GetKey(DownKey))
-        //    Accelerate(Direction.SOUTH);
-        //if (Input.GetKey(LeftKey))
-        //    Accelerate(Direction.WEST);
-
-        //if (!Input.GetKey(UpKey)
-        //    && !Input.GetKey(RightKey)
-        //    && !Input.GetKey(DownKey)
-        //    && !Input.GetKey(LeftKey))
-        //    Decelerate();
     }
 
     private void Move(Direction pDirection)
@@ -127,54 +111,13 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D pCollider2D)
     {
         Validator.AddWord(pCollider2D.gameObject);
+        SpriteRenderer.sprite = PickupSprite;
+        Invoke("SwitchBackSprite", SpriteSwitchbackDelay);
     }
 
+    private void SwitchBackSprite()
+    {
+        SpriteRenderer.sprite = DefaultSprite;
+    }
 
-
-    //private void Accelerate(Direction pDirection)
-    //{
-    //    if (RB.velocity.magnitude > MaxSpeed)
-    //        return;
-    //    switch(pDirection)
-    //    {
-    //        case Direction.NORTH:
-    //            transform.position += Vector3.up * 6 * Time.deltaTime;
-    //            break;
-    //        case Direction.EAST:
-    //            transform.position += Vector3.right * 6 * Time.deltaTime;
-    //            break;
-    //        case Direction.SOUTH:
-    //            transform.position += Vector3.down * 6 * Time.deltaTime;
-    //            break;
-    //        case Direction.WEST:
-    //            transform.position += Vector3.left * 6 * Time.deltaTime;
-    //            break;
-    //            //case Direction.NORTH:
-    //            //    RB.velocity += Vector3.up * (MaxSpeed / TimeToFullSpeed) * Time.deltaTime;
-    //            //    break;
-    //            //case Direction.EAST:
-    //            //    RB.velocity += Vector3.right * (MaxSpeed / TimeToFullSpeed) * Time.deltaTime;
-    //            //    break;
-    //            //case Direction.SOUTH:
-    //            //    RB.velocity += Vector3.down * (MaxSpeed / TimeToFullSpeed) * Time.deltaTime;
-    //            //    break;
-    //            //case Direction.WEST:
-    //            //    RB.velocity += Vector3.left * (MaxSpeed / TimeToFullSpeed) * Time.deltaTime;
-    //            //    break;
-    //    }
-    //}
-
-
-    //private void Decelerate()
-    //{
-    //    float velocityMagnitude = RB.velocity.magnitude;
-
-    //    velocityMagnitude -= (MaxSpeed / TimeToNoSpeed) * Time.deltaTime;
-    //    if(velocityMagnitude < 0)
-    //    {
-    //        velocityMagnitude = 0;
-    //    }
-
-    //    RB.velocity = RB.velocity.normalized * velocityMagnitude;
-    //}
 }

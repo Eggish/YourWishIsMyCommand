@@ -64,6 +64,7 @@ public class Validator : MonoBehaviour
         }
 
         feedbackText.text = "???";
+        GirlAnimator.SetTrigger("tWhat");
         Debug.Log("Player got no points, nonsense Sentence");
     }
 }
