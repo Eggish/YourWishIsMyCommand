@@ -12,6 +12,8 @@ public class Validator : MonoBehaviour
     [SerializeField] private ParticleSystem ConfettiCanon = null;
     [SerializeField] private TextMeshPro FeedbackTextPrefab = null;
 
+    [SerializeField] private Animator GirlAnimator = null;
+
     void Start()
     {
         if (ConfettiCanon == null)
@@ -47,11 +49,13 @@ public class Validator : MonoBehaviour
                 if (t.PointValue > 0)
                 {
                     ConfettiCanon.Play();
+                    GirlAnimator.SetTrigger("tYes");
                     feedbackText.text = "+" + t.PointValue;
                     feedbackText.faceColor = Color.green;
                 }
                 else
                 {
+                    GirlAnimator.SetTrigger("tNo");
                     feedbackText.text = t.PointValue.ToString();
                     feedbackText.faceColor = Color.red;
                 }
