@@ -397,6 +397,106 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.size
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: SpawnDelay
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[29].Sentence
+      value: your scarf is nice
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[29].PointValue
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[30].Sentence
+      value: your hat is nice
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[30].PointValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[31].Sentence
+      value: your hat is lovely
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[31].PointValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[32].Sentence
+      value: your scarf is lovely
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[32].PointValue
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[33].Sentence
+      value: I enjoy babies
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[33].PointValue
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[34].Sentence
+      value: I enjoy your smile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[34].PointValue
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[35].Sentence
+      value: we're lovely
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[35].PointValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[36].Sentence
+      value: your company is nice
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[36].PointValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[37].Sentence
+      value: your company is lovely
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230341165658326057, guid: 7677c6da392fe9049b12718b7a7d0a25,
+        type: 3}
+      propertyPath: Sentences.Array.data[37].PointValue
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5230341165824436172, guid: 7677c6da392fe9049b12718b7a7d0a25,
         type: 3}
       propertyPath: m_Mesh
