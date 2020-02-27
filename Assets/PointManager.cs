@@ -14,6 +14,7 @@ public class PointManager : MonoBehaviour
     void Start()
     {
         PointText = TextMesh.text;
+        AlterPoints(0);
     }
 
     public void AlterPoints(int pPointChange)
