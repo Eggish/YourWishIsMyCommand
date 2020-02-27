@@ -12,6 +12,9 @@ ModelImporter:
   - first:
       74: -3349360266864684052
     second: NO
+  - first:
+      74: 5033643705338554745
+    second: WHAT
   externalObjects: {}
   materials:
     materialImportMode: 1
