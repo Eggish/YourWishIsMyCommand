@@ -79,6 +79,17 @@ public class WordSpawner : MonoBehaviour
         SpawnTimer = SpawnDelay;
     }
 
+    private bool IsWordDuplicate(string pWord)
+    {
+        foreach (string word in WordPile)
+        {
+            if (word == pWord)
+                return true;
+        }
+
+        return false;
+    }
+
     private void ParseSentence(string pString)
     {
         List<char> letters = new List<char>();
@@ -92,7 +103,10 @@ public class WordSpawner : MonoBehaviour
             {
                 string newWord = pString.Substring(lastSpace, i - lastSpace);
 
-                WordPile.Add(newWord);
+                if (!IsWordDuplicate(newWord))
+                {
+                    WordPile.Add(newWord);
+                }
 
                 letters.Clear();
                 lastSpace = i + 1;
@@ -104,12 +118,13 @@ public class WordSpawner : MonoBehaviour
         }
 
         string lastWord = pString.Substring(lastSpace, pString.Length - lastSpace);
-        WordPile.Add(lastWord);
+        if (!IsWordDuplicate(lastWord))
+        {
+            WordPile.Add(lastWord);
+        }
     }
-
     public SentenceWrapper[] GetSentences()
     {
         return Sentences;
     }
-
 }
