@@ -405,10 +405,48 @@ MonoBehaviour:
     PointValue: 5
   - Sentence: I like your company
     PointValue: 5
-  - Sentence: I bet you make nice babies
+  - Sentence: I like you
+    PointValue: 5
+  - Sentence: nice hat
+    PointValue: 2
+  - Sentence: nice scarf
+    PointValue: -5
+  - Sentence: You have a lovely scarf
     PointValue: -10
-  - Sentence: I bet you make lovely babies
+  - Sentence: You have a lovely hat
+    PointValue: 10
+  - Sentence: I make babies smile
+    PointValue: -5
+  - Sentence: you make babies smile
+    PointValue: -5
+  - Sentence: I enjoy your hat
+    PointValue: 2
+  - Sentence: I enjoy your scarf
+    PointValue: -2
+  - Sentence: I like your babies
     PointValue: -10
+  - Sentence: I enjoy babies
+    PointValue: -10
+  - Sentence: Nice scarf you have
+    PointValue: -5
+  - Sentence: Nice hat you have
+    PointValue: 5
+  - Sentence: I enjoy your babies
+    PointValue: -10
+  - Sentence: We're having babies
+    PointValue: -10
+  - Sentence: Lovely weather we're having
+    PointValue: 5
+  - Sentence: We're having lovely babies
+    PointValue: -10
+  - Sentence: weather is nice
+    PointValue: 2
+  - Sentence: weather is lovely
+    PointValue: 2
+  - Sentence: you have a nice scarf
+    PointValue: -5
+  - Sentence: you have a nice hat
+    PointValue: 5
   TextPrefab: {fileID: 1349388435271332177, guid: cf7b77d77524a484da66c81448b35a5f,
     type: 3}
   SpawnDelay: 1
