@@ -414,6 +414,7 @@ MonoBehaviour:
   ConfettiCanon: {fileID: 0}
   FeedbackTextPrefab: {fileID: 6743850185320478563, guid: dac3f15c6c23d88479381d976a1dc81b,
     type: 3}
+  GirlAnimator: {fileID: 0}
 --- !u!23 &5230341165310641780
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -806,9 +807,27 @@ MonoBehaviour:
     PointValue: -5
   - Sentence: you have a nice hat
     PointValue: 5
+  - Sentence: your scarf is nice
+    PointValue: -3
+  - Sentence: your hat is nice
+    PointValue: 5
+  - Sentence: your hat is lovely
+    PointValue: 5
+  - Sentence: your scarf is lovely
+    PointValue: -3
+  - Sentence: I enjoy babies
+    PointValue: -5
+  - Sentence: I enjoy your smile
+    PointValue: 3
+  - Sentence: we're lovely
+    PointValue: 1
+  - Sentence: your company is nice
+    PointValue: 5
+  - Sentence: your company is lovely
+    PointValue: 5
   TextPrefab: {fileID: 1349388435271332177, guid: cf7b77d77524a484da66c81448b35a5f,
     type: 3}
-  SpawnDelay: 1
+  SpawnDelay: 1.5
 --- !u!1 &5230341165824436160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,7 +1258,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b14831940c3c48d4484f321bfae306f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: faffa5dd45569c042b464d8672bb68cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1307,7 +1326,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.16, y: 2.16}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
